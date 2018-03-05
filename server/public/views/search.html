@@ -1,0 +1,11 @@
+<h1>in search</h1>
+
+<!-- ng-repeat with search string/array as the filter -->
+<!-- show all question with titles as links -->
+
+<div ng-repeat="question in sc.questions.allQuestions">
+        <a href='/#!individualquestion' ng-click="hc.getIndividualQuestion(question._id)">{{question.question_title}}</a>
+        <div>{{question.question_author}}</div>
+        <div>{{question.question_description}}</div>
+        <div>{{question.question_posted_date}}</div>
+    </div>

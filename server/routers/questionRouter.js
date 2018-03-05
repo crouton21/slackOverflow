@@ -40,10 +40,22 @@ router.post('/', function(request, response){
     })
 });
 
-router.get('/', function(request, response){
+router.get('/top', function(request, response){
     question.find({}, function(error, topQuestions){ //limit to top 10, sort by most viewed!
         if(error){
             console.log('error on getting top questions', error);
+            response.sendStatus(500);
+        }
+        else{
+            response.send(topQuestions);
+        }
+    })
+})
+
+router.get('/', function(request, response){
+    question.find({}, function(error, topQuestions){ 
+        if(error){
+            console.log('error on getting all questions', error);
             response.sendStatus(500);
         }
         else{

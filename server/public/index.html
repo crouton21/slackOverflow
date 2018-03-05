@@ -13,6 +13,7 @@
     <script src="scripts/controllers/user.controller.js"></script>
     <script src="scripts/controllers/newquestion.controller.js"></script>
     <script src="scripts/controllers/individualquestion.controller.js"></script>
+    <script src="scripts/controllers/search.controller.js"></script>
     <link rel="stylesheet" href="styles/style.css">
     <title>Slack Overflow</title>
 </head>
@@ -23,8 +24,8 @@
     <a href="/#!tags">Tags</a>
     <a href="/#!users">Users</a>
     <img id="search" src="images/search.png">
-    <input placeholder="search" ng-model="hc.searchFor">
-    <button ng-click="hc.searchClicked(hc.searchFor)">Go</button>
+    <input type="text" placeholder="search" ng-model="hc.search">
+    <a href="/#!search" ng-click="hc.searchFor(hc.search)">Go</a>
     <a href="/#!newquestion">Ask a Queston</a>
     </nav>
 </header>

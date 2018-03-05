@@ -5,5 +5,6 @@ app.controller('HomeController', ['QuestionService', function(QuestionService) {
     self.questions = QuestionService.questions;
     self.getTopQuestions = QuestionService.getTopQuestions;
     self.getIndividualQuestion = QuestionService.getIndividualQuestion;
+    self.searchFor = QuestionService.searchFor;
 
   }]);

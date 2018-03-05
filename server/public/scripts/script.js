@@ -16,6 +16,9 @@ app.config(function($routeProvider){
   }).when('/individualquestion', {
     templateUrl: 'views/individualquestion.html',
     controller: 'individualquestionController as ic'
+  }).when('/search', {
+    templateUrl: 'views/search.html',
+    controller: 'searchController as sc'
   }).when('/home', {
     redirectTo: '/'
   }).otherwise({ template: '<h1>404 Page Not Found</h1>' });
