@@ -1,0 +1,11 @@
+<h3>Slack Overflow</h3>
+<h4>Questions</h4>
+
+<!-- Add a sort by selector - most viewed(default), most recent-->
+
+<div ng-repeat="question in hc.questions.topQuestions">
+    <a href='/#!individualquestion' ng-click="hc.getIndividualQuestion(question._id)">{{question.question_title}}</a>
+    <div>{{question.question_author}}</div>
+    <div>{{question.question_description}}</div>
+    <div>{{question.question_posted_date}}</div>
+</div>

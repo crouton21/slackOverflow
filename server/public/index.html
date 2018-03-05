@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vendors/angular.min.js"></script>
+    <script src="vendors/angular-route.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/services/questions.services.js"></script>
+    <script src="scripts/controllers/home.controller.js"></script>
+    <script src="scripts/controllers/tag.controller.js"></script>
+    <script src="scripts/controllers/user.controller.js"></script>
+    <script src="scripts/controllers/newquestion.controller.js"></script>
+    <script src="scripts/controllers/individualquestion.controller.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Slack Overflow</title>
+</head>
+<header class="container">
+    <nav>
+    <img id="logo" src="images/slack_overflow.png">   <!-- on click bring to home -->
+    <a href="/#!home">Questions</a>
+    <a href="/#!tags">Tags</a>
+    <a href="/#!users">Users</a>
+    <img id="search" src="images/search.png">
+    <input placeholder="search" ng-model="hc.searchFor">
+    <button ng-click="hc.searchClicked(hc.searchFor)">Go</button>
+    <a href="/#!newquestion">Ask a Queston</a>
+    </nav>
+</header>
+<body ng-app="soloApp">
+    <main ng-view>
+
+    </main>
+</body>
+</html>

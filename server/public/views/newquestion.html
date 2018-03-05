@@ -1,0 +1,16 @@
+<h3>Ask a Question</h3>
+
+<!-- add advice for asking a question -->
+
+<form ng-submit="nc.questionSubmitted(nc.newQuestion)">
+<!-- TAKE AWAY AUTHOR AFTER LOG IN AND MAKE AUTOMATIC -->
+<label>Author:</label>
+<input type="text" ng-model="nc.newQuestion.question_author"> 
+<label>Title:</label>
+<input type="text" ng-model="nc.newQuestion.question_title">
+<label>Question:</label>
+<input type="text" ng-model="nc.newQuestion.question_description">
+<button ng-submit="nc.questionSubmitted(nc.newQuestion)">Ask</button>
+</form>
+
+
